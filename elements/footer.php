@@ -1,0 +1,1 @@
+<!-- Footer removed per user preference -->
