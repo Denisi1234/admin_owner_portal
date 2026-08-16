@@ -18,6 +18,8 @@
              $ch = curl_init('http://127.0.0.1:8000/api/login');
              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
              curl_setopt($ch, CURLOPT_POST, true);
+             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+             curl_setopt($ch, CURLOPT_TIMEOUT, 5);
              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
                  'email' => $email,
                  'password' => $password,
@@ -116,8 +118,8 @@
                                         <div class="row d-flex justify-content-between mt-4 mb-2">
                                             <div class="mb-3">
                                                <div class="form-check custom-checkbox ms-1">
-													<input type="checkbox" class="form-check-input" id="basic_checkbox_1">
-													<label class="form-check-label" for="basic_checkbox_1">Remember my preference</label>
+ 													<input type="checkbox" name="remember" class="form-check-input" id="rememberMe">
+ 													<label class="form-check-label" for="rememberMe">Remember my preference</label>
 												</div>
                                             </div>
                                             <div class="mb-3">
@@ -130,8 +132,8 @@
                                     </form>
                                     <div class="mt-3 text-center">
                                         <form action="page-login.php" method="POST" class="d-inline">
-                                            <input type="hidden" name="email" value="admin@fastnet.com">
-                                            <input type="hidden" name="password" value="password">
+                                            <input type="hidden" id="quickAdminEmail" name="email" value="admin@fastnet.com">
+                                            <input type="hidden" id="quickAdminPassword" name="password" value="password">
                                             <button type="submit" class="btn btn-outline-primary btn-sm w-100"><i class="fas fa-user-shield me-1"></i> Quick Sign In as Admin</button>
                                         </form>
                                     </div>

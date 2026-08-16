@@ -372,8 +372,9 @@ if (isset($_GET['id'])) {
                         const res = JSON.parse(xhr.responseText);
                         finalUrl = res.url;
                     } else {
-                        // fallback mock image reference
-                        finalUrl = 'assets/images/room/room' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
+                        alert('Image upload failed. Please verify storage backend.');
+                        if (document.getElementById(cardId)) document.getElementById(cardId).remove();
+                        return;
                     }
                     const card = document.getElementById(cardId);
                     if (card) {

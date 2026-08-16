@@ -17,6 +17,8 @@
              $ch = curl_init('http://127.0.0.1:8000/api/register');
              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
              curl_setopt($ch, CURLOPT_POST, true);
+             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+             curl_setopt($ch, CURLOPT_TIMEOUT, 5);
              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
                  'name' => $username,
                  'email' => $email,

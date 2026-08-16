@@ -314,7 +314,7 @@
     cb(start, end);
     
 });
-</script>z
+</script>
 
 </body>
 </html>

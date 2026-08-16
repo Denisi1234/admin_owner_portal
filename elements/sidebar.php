@@ -28,18 +28,20 @@ $userEmail = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : (($userR
                     <span class="nav-text">Management</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="ecom-customers.php">Verify Lodges & Owners</a></li>
+                    <li><a href="ecom-customers.php">Verify Lodges & Owner Profiles</a></li>
                     <li><a href="email-compose.php">Messages & Support</a></li>
                     <li><a href="form-element.php">System Configurations</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-041-graph"></i>
-                    <span class="nav-text">System Reports</span>
+                    <span class="nav-text">Financial Operations</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="chart-chartist.php">Platform Analytics</a></li>
-                    <li><a href="chart-chartjs.php">Financial Reports</a></li>
+                    <li><a href="chart-chartist.php">Financial Intelligence & Analytics</a></li>
+                    <li><a href="chart-flot.php">Owner Payout Control & History</a></li>
+                    <li><a href="chart-chartjs.php">Financial Transaction Ledger</a></li>
+                    <li><a href="ecom-invoice.php">Payout Invoices & Statements</a></li>
                 </ul>
             </li>
             <?php else: ?>
@@ -50,6 +52,7 @@ $userEmail = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : (($userR
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="index.php">Overview</a></li>
+                    <li><a href="edit-lodge.php">Edit My Lodge</a></li>
                     <li><a href="onboarding.php">Onboard New Lodge</a></li>
                     <li><a href="guest-list.php">Guest List</a></li>
                     <li><a href="room-list.php">My Rooms</a></li>
@@ -72,8 +75,10 @@ $userEmail = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : (($userR
                     <span class="nav-text">Lodge Finance</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="chart-flot.php">Earnings Chart</a></li>
-                    <li><a href="ecom-invoice.php">Payout Invoices</a></li>
+                    <li><a href="chart-chartist.php">Financial Intelligence & Analytics</a></li>
+                    <li><a href="chart-flot.php">Owner Payout Control & History</a></li>
+                    <li><a href="chart-chartjs.php">Financial Transaction Ledger</a></li>
+                    <li><a href="ecom-invoice.php">Payout Invoices & Statements</a></li>
                 </ul>
             </li>
             <?php endif; ?>

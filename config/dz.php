@@ -187,6 +187,8 @@ $DexignZoneSettings = [
 				'vendor/owl-carousel/owl.carousel.css'
 			],
 			'js' => [
+				'vendor/moment/moment.min.js',
+				'vendor/bootstrap-daterangepicker/daterangepicker.js',
 				'vendor/owl-carousel/owl.carousel.js',
 				'js/plugins-init/datatables.init.js',
 			],
@@ -211,9 +213,12 @@ $DexignZoneSettings = [
 		],
 		'concierge-list' => [
 			'css' => [
-				'vendor/datatables/css/jquery.dataTables.min.css'
+				'vendor/datatables/css/jquery.dataTables.min.css',
+				'vendor/bootstrap-daterangepicker/daterangepicker.css',
 			],
 			'js' => [
+				'vendor/moment/moment.min.js',
+				'vendor/bootstrap-daterangepicker/daterangepicker.js',
 				'vendor/datatables/js/jquery.dataTables.min.js',
 				'js/plugins-init/datatables.init.js',
 			],
@@ -239,8 +244,11 @@ $DexignZoneSettings = [
 		'room-list' => [
 			'css' => [
 				'vendor/datatables/css/jquery.dataTables.min.css',
+				'vendor/bootstrap-daterangepicker/daterangepicker.css',
 			],
 			'js' => [
+				'vendor/moment/moment.min.js',
+				'vendor/bootstrap-daterangepicker/daterangepicker.js',
 				'vendor/datatables/js/jquery.dataTables.min.js',
 				'js/plugins-init/datatables.init.js',
 			],

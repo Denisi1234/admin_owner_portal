@@ -173,9 +173,18 @@ function deleteAllCookie(reload = true)
 	};
 	
 		
+	var themeSets = {
+		0: dlabThemeSet1,
+		1: dlabThemeSet1,
+		2: dlabThemeSet2,
+		3: dlabThemeSet3,
+		4: dlabThemeSet4,
+		5: dlabThemeSet5,
+		6: dlabThemeSet6
+	};
+
 	function themeChange(theme){
-		var themeSettings = {};
-		themeSettings = eval('dlabThemeSet'+theme);
+		var themeSettings = themeSets[theme] || dlabThemeSet1;
 		dlabSettingsOptions = themeSettings; /* For Screen Resize */
 		new dlabSettings(themeSettings);
 		

@@ -43,71 +43,76 @@ let dataSet = [
 (function($) {
      "use strict"
 	 // guestTable-all
-	var table = $('#guestTable-all').DataTable({
-		searching: false,
-		paging:true,
-		select: false,         
-		lengthChange:false ,
-		language: {
-			paginate: {
-			  previous: 'Prev',
-			  next:  'Next'
+	if ($('#guestTable-all').length) {
+		$('#guestTable-all').DataTable({
+			searching: false,
+			paging:true,
+			select: false,         
+			lengthChange:false ,
+			language: {
+				paginate: {
+				  previous: 'Prev',
+				  next:  'Next'
+				}
 			}
-		  }
-		
-	}); 
-	var table = $('#guestTable-all1').DataTable({
-		searching: false,
-		paging:true,
-		select: false,         
-		lengthChange:false ,
-		language: {
-			paginate: {
-			  previous: 'Prev',
-			  next:  'Next'
+		}); 
+	}
+	if ($('#guestTable-all1').length) {
+		$('#guestTable-all1').DataTable({
+			searching: false,
+			paging:true,
+			select: false,         
+			lengthChange:false ,
+			language: {
+				paginate: {
+				  previous: 'Prev',
+				  next:  'Next'
+				}
 			}
-		  }
-		
-	}); 
-	var table = $('#guestTable-all2').DataTable({
-		searching: false,
-		paging:true,
-		select: false,         
-		lengthChange:false ,
-		language: {
-			paginate: {
-			  previous: 'Prev',
-			  next:  'Next'
+		}); 
+	}
+	if ($('#guestTable-all2').length) {
+		$('#guestTable-all2').DataTable({
+			searching: false,
+			paging:true,
+			select: false,         
+			lengthChange:false ,
+			language: {
+				paginate: {
+				  previous: 'Prev',
+				  next:  'Next'
+				}
 			}
-		  }
-		
-	}); 
-	var table = $('#guestTable-all3').DataTable({
-		searching: false,
-		paging:true,
-		select: false,         
-		lengthChange:false ,
-		language: {
-			paginate: {
-			  previous: 'Prev',
-			  next:  'Next'
+		}); 
+	}
+	if ($('#guestTable-all3').length) {
+		$('#guestTable-all3').DataTable({
+			searching: false,
+			paging:true,
+			select: false,         
+			lengthChange:false ,
+			language: {
+				paginate: {
+				  previous: 'Prev',
+				  next:  'Next'
+				}
 			}
-		  }
-		
-	}); 
-	var table = $('#guestTable-all4').DataTable({
-		searching: false,
-		paging:true,
-		select: false,         
-		lengthChange:false ,
-		language: {
-			paginate: {
-			  previous: 'Prev',
-			  next:  'Next'
+		}); 
+	}
+	if ($('#guestTable-all4').length) {
+		$('#guestTable-all4').DataTable({
+			searching: false,
+			paging:true,
+			select: false,         
+			lengthChange:false ,
+			language: {
+				paginate: {
+				  previous: 'Prev',
+				  next:  'Next'
+				}
 			}
-		  }
-		
-	}); 
+		}); 
+	} 
     //example 1
     var table = $('#example').DataTable({
         createdRow: function ( row, data, index ) {

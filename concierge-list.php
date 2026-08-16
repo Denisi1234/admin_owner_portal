@@ -760,7 +760,7 @@
 			var end = moment();
 
 			function cb(start, end) {
-				$('#reportrange span').php(start.format('D MMMM YYYY') + ' &nbsp - &nbsp ' + end.format('D MMMM YYYY'));
+				$('#reportrange span').html(start.format('D MMMM YYYY') + ' &nbsp - &nbsp ' + end.format('D MMMM YYYY'));
     }
 
     $('#reportrange').daterangepicker({
@@ -779,7 +779,7 @@
     cb(start, end);
     
 });
-</script>z
+</script>
 
 </body>
 </html>

@@ -340,10 +340,9 @@
 			
 			
 			load:function(){
-				chartBar();
-				chartBar1();
-				chartBar2();
-				
+				if(document.querySelector("#chartBar")) chartBar();
+				if(document.querySelector("#chartBar1")) chartBar1();
+				if(document.querySelector("#chartBar2")) chartBar2();
 			},
 			
 			resize:function(){

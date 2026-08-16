@@ -311,7 +311,9 @@
     }
     
 	var domoPanel = function(){
-		const ps = new PerfectScrollbar('.dlab-demo-content');
+		if(document.querySelector('.dlab-demo-content')){
+			const ps = new PerfectScrollbar('.dlab-demo-content');
+		}
 		$('.dlab-demo-trigger').on('click', function() {
 				$('.dlab-demo-panel').addClass('show');
 		  });

@@ -179,6 +179,9 @@
                         <?php if (!empty($error_message)): ?>
                             <div class="alert alert-danger me-3 mb-0"><?php echo htmlspecialchars($error_message); ?></div>
                         <?php endif; ?>
+						<?php if (!empty($properties)): ?>
+							<a href="edit-lodge.php?id=<?php echo $properties[0]['id']; ?>" class="btn btn-outline-primary font-w600 me-2"><i class="fas fa-edit me-1"></i> Edit Lodge Details</a>
+						<?php endif; ?>
 						<a href="add-room.php" class="btn btn-primary font-w600"><i class="fas fa-plus-circle me-1"></i> Add Room to Lodge</a>
 						<div class="newest ms-3">
 							<select class="default-select">
@@ -535,7 +538,7 @@
 			var end = moment();
 
 			function cb(start, end) {
-				$('#reportrange span').php(start.format('D MMMM YYYY') + ' &nbsp - &nbsp ' + end.format('D MMMM YYYY'));
+				$('#reportrange span').html(start.format('D MMMM YYYY') + ' &nbsp - &nbsp ' + end.format('D MMMM YYYY'));
     }
 
     $('#reportrange').daterangepicker({

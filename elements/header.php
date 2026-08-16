@@ -9,7 +9,7 @@
 				</div>
 				<div class="nav-item d-flex align-items-center">
 					<form action="room-list.php" method="GET" class="input-group search-area">
-						<input type="text" name="search" class="form-control" placeholder="Search lodge name or location..." value="<?php echo htmlspecialchars($_GET['search'] ?? ''); ?>">
+						<input type="text" id="header-search-input" name="search" class="form-control" placeholder="Search lodge name or location..." value="<?php echo htmlspecialchars($_GET['search'] ?? ''); ?>" autocomplete="off">
 						<button type="submit" class="input-group-text border-0 bg-transparent" style="cursor: pointer;"><i class="flaticon-381-search-2"></i></button>
 					</form>
 				</div>
