@@ -38,144 +38,29 @@
 									<path id="Path_1954" data-name="Path 1954" d="M349.741,65.233V62.747a1.2,1.2,0,1,1,2.4,0v2.486a8.4,8.4,0,0,1,7.2,8.314v4.517l.971,1.942a3,3,0,0,1-2.683,4.342h-5.488a1.2,1.2,0,1,1-2.4,0h-5.488a3,3,0,0,1-2.683-4.342l.971-1.942V73.547a8.4,8.4,0,0,1,7.2-8.314Zm1.2,2.314a6,6,0,0,0-6,6v4.8a1.208,1.208,0,0,1-.127.536l-1.1,2.195a.6.6,0,0,0,.538.869h13.375a.6.6,0,0,0,.536-.869l-1.1-2.195a1.206,1.206,0,0,1-.126-.536v-4.8a6,6,0,0,0-6-6Z" transform="translate(0 0)" fill="#135846" fill-rule="evenodd" />
 								</g>
 							</svg>
-
-							<span class="badge light text-white bg-primary rounded-circle">4</span>
+							<span class="badge light text-white bg-primary rounded-circle">System</span>
 						</a>
-						<div class="dropdown-menu dropdown-menu-end">
-							<div id="DZ_W_Notification1" class="widget-media dlab-scroll p-3" style="height:380px;">
-								<ul class="timeline">
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2">
-												<img alt="image" width="50" src="assets/images/avatar/1.jpg">
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Dr sultads Send you Photo</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
+						<div class="dropdown-menu dropdown-menu-end p-0 shadow border-0" style="min-width: 280px;">
+							<div class="card mb-0 border-0">
+								<div class="card-header bg-primary text-white py-2">
+									<h6 class="font-w600 text-white mb-0"><i class="fas fa-bell me-2"></i>System Activity Alerts</h6>
+								</div>
+								<div class="card-body p-3">
+									<div class="d-flex align-items-center mb-2">
+										<span class="p-2 bg-success text-white rounded-circle me-2"><i class="fas fa-shield-alt fs-14"></i></span>
+										<div>
+											<strong class="d-block fs-13 text-dark">FastNet Portal Active</strong>
+											<small class="text-muted">Real-time database sync connected</small>
 										</div>
-									</li>
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2 media-info">
-												KG
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Resport created successfully</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
+									</div>
+									<div class="d-flex align-items-center">
+										<span class="p-2 bg-info text-white rounded-circle me-2"><i class="fas fa-user-shield fs-14"></i></span>
+										<div>
+											<strong class="d-block fs-13 text-dark">Account Verified</strong>
+											<small class="text-muted">Logged in as <?php echo htmlspecialchars($_SESSION['user_role'] ?? 'user'); ?></small>
 										</div>
-									</li>
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2 media-success">
-												<i class="fa fa-home"></i>
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Reminder : Treatment Time!</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2">
-												<img alt="image" width="50" src="assets/images/avatar/1.jpg">
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Dr sultads Send you Photo</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2 media-danger">
-												KG
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Resport created successfully</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="timeline-panel">
-											<div class="media me-2 media-primary">
-												<i class="fa fa-home"></i>
-											</div>
-											<div class="media-body">
-												<h6 class="mb-1">Reminder : Treatment Time!</h6>
-												<small class="d-block">29 July 2020 - 02:26 PM</small>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<a class="all-notification" href="javascript:void(0);">See all notifications <i class="ti-arrow-end"></i></a>
-						</div>
-					</li>
-					<li class="nav-item dropdown notification_dropdown">
-						<a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21.6" viewBox="0 0 24 21.6">
-								<g id="_008-chat" data-name="008-chat" transform="translate(-250.397 -62.547)">
-									<path id="Path_1956" data-name="Path 1956" d="M274.4,67.347a4.8,4.8,0,0,0-4.8-4.8H255.2a4.8,4.8,0,0,0-4.8,4.8v15.6a1.2,1.2,0,0,0,2.048.848l3.746-3.745a2.4,2.4,0,0,1,1.7-.7H269.6a4.8,4.8,0,0,0,4.8-4.8Zm-2.4,0a2.4,2.4,0,0,0-2.4-2.4H255.2a2.4,2.4,0,0,0-2.4,2.4v12.7l1.7-1.7a4.8,4.8,0,0,1,3.395-1.406H269.6a2.4,2.4,0,0,0,2.4-2.4Zm-15.6,7.2H266a1.2,1.2,0,1,0,0-2.4h-9.6a1.2,1.2,0,0,0,0,2.4Zm0-4.8h12a1.2,1.2,0,1,0,0-2.4h-12a1.2,1.2,0,0,0,0,2.4Z" fill="#135846" fill-rule="evenodd" />
-								</g>
-							</svg>
-							<span class="badge light text-white bg-primary rounded-circle">15</span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-end">
-							<div id="DZ_W_TimeLine02" class="widget-timeline dlab-scroll style-1 ps ps--active-y p-3 height370">
-								<ul class="timeline">
-									<li>
-										<div class="timeline-badge primary"></div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>10 minutes ago</span>
-											<h6 class="mb-0">Youtube, a video-sharing website, goes live <strong class="text-primary">$500</strong>.</h6>
-										</a>
-									</li>
-									<li>
-										<div class="timeline-badge info">
-										</div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>20 minutes ago</span>
-											<h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-											<p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
-										</a>
-									</li>
-									<li>
-										<div class="timeline-badge danger">
-										</div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>30 minutes ago</span>
-											<h6 class="mb-0">john just buy your product <strong class="text-warning">Sell $250</strong></h6>
-										</a>
-									</li>
-									<li>
-										<div class="timeline-badge success">
-										</div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>15 minutes ago</span>
-											<h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-										</a>
-									</li>
-									<li>
-										<div class="timeline-badge warning">
-										</div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>20 minutes ago</span>
-											<h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-										</a>
-									</li>
-									<li>
-										<div class="timeline-badge dark">
-										</div>
-										<a class="timeline-panel text-muted" href="javascript:void(0);">
-											<span>20 minutes ago</span>
-											<h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-										</a>
-									</li>
-								</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>

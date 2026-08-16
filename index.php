@@ -317,100 +317,11 @@ if ($userRole === 'admin') {
 	<?php include 'elements/page-js.php'; ?>
 
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const apiToken = <?php echo json_encode($apiToken); ?>;
-			const userRole = <?php echo json_encode($userRole); ?>;
-
-			const rangeSelect = document.getElementById('dash-date-range');
-			const customContainer = document.getElementById('dash-custom-range');
-			const btnApplyCustom = document.getElementById('btn-dash-apply-range');
-
-			function formatCurrency(amount) {
-				return 'TSh ' + Math.round(amount || 0).toLocaleString();
-			}
-
-			rangeSelect.addEventListener('change', function() {
-				if (this.value === 'custom') {
-					customContainer.classList.remove('d-none');
-				} else {
-					customContainer.classList.add('d-none');
-					fetchDashboardStats(this.value);
-				}
-			});
-
-			btnApplyCustom.addEventListener('click', function() {
-				const from = document.getElementById('dash-date-from').value;
-				const to = document.getElementById('dash-date-to').value;
-				if (!from || !to) {
-					alert('Please select both From and To dates.');
-					return;
-				}
-				fetchDashboardStats('custom', from, to);
-			});
-
-			async function fetchDashboardStats(range = '30_days', dateFrom = null, dateTo = null) {
-				let endpoint = 'http://127.0.0.1:8000/api/admin/dashboard-stats';
-				if (userRole !== 'admin') {
-					endpoint = 'http://127.0.0.1:8000/api/finance/overview';
-				}
-
-				const url = new URL(endpoint);
-				url.searchParams.append('date_range', range);
-				if (range === 'custom') {
-					if (dateFrom) url.searchParams.append('date_from', dateFrom);
-					if (dateTo) url.searchParams.append('date_to', dateTo);
-				}
-
-				try {
-					const res = await fetch(url, {
-						headers: {
-							'Accept': 'application/json',
-							'Authorization': `Bearer ${apiToken}`
-						}
-					});
-					if (!res.ok) throw new Error('Backend dashboard stats error');
-					const json = await res.json();
-
-					if (userRole === 'admin') {
-						const o = json.owners || {};
-						const l = json.lodges || {};
-						const r = json.rooms || {};
-						const c = json.customers || {};
-						const b = json.bookings || {};
-						const f = json.financials || {};
-
-						document.getElementById('stat-total-owners').textContent = (o.total || 0).toLocaleString();
-						document.getElementById('stat-active-owners').textContent = (o.active || 0).toLocaleString();
-						document.getElementById('stat-suspended-owners').textContent = (o.suspended || 0).toLocaleString();
-
-						document.getElementById('stat-total-lodges').textContent = (l.total || 0).toLocaleString();
-						document.getElementById('stat-approved-lodges').textContent = (l.approved || 0).toLocaleString();
-						document.getElementById('stat-pending-lodges').textContent = (l.pending || 0).toLocaleString();
-
-						document.getElementById('stat-total-rooms').textContent = (r.total || 0).toLocaleString();
-						document.getElementById('stat-total-customers').textContent = (c.total || 0).toLocaleString();
-
-						document.getElementById('stat-total-bookings').textContent = (b.total || 0).toLocaleString();
-						document.getElementById('stat-confirmed-bookings').textContent = (b.confirmed || 0).toLocaleString();
-						document.getElementById('stat-cancelled-bookings').textContent = (b.cancelled || 0).toLocaleString();
-
-						document.getElementById('stat-gross-value').textContent = formatCurrency(f.gross_booking_value);
-						document.getElementById('stat-platform-fee').textContent = formatCurrency(f.platform_commission);
-						document.getElementById('stat-owner-net').textContent = formatCurrency(f.owner_earnings);
-					} else {
-						const cards = json.summary_cards || {};
-						document.getElementById('stat-gross-value').textContent = formatCurrency(cards.gross_booking_value);
-						document.getElementById('stat-platform-fee').textContent = formatCurrency(cards.platform_commission);
-						document.getElementById('stat-owner-net').textContent = formatCurrency(cards.total_owner_earnings);
-					}
-				} catch (e) {
-					console.error('Failed to load dashboard metrics from backend', e);
-				}
-			}
-
-			// Initial load
-			fetchDashboardStats('30_days');
-		});
+		window.DASHBOARD_CONFIG = {
+			apiToken: <?php echo json_encode($apiToken); ?>,
+			userRole: <?php echo json_encode($userRole); ?>
+		};
 	</script>
+	<script src="assets/js/custom/dashboard.js"></script>
 </body>
 </html>
